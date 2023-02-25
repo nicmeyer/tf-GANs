@@ -204,7 +204,7 @@ class GANMonitor(callbacks.Callback):
       image_grid.paste(
         img, box=(i % self.cols * IMG_COLS, i // self.cols * IMG_ROWS)
       )
-    image_grid = image_grid.resize((100, 100))
+    image_grid = image_grid.resize((500, 500))
     return image_grid
 
   def on_epoch_begin(self, epoch, logs=None):
@@ -213,8 +213,8 @@ class GANMonitor(callbacks.Callback):
 
   def on_train_end(self, logs=None):
     grid = self._generate_image_grid()
-    grid.save("gan.gif", save_all=True,
-              append_images=self.grids, duration=200, loop=0)
+    grid.save("gan/gan.gif", save_all=True,
+              append_images=self.grids, duration=400, loop=0)
 
 
 if __name__ == "__main__":
