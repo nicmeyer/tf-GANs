@@ -17,10 +17,8 @@ tf_conv = tf.keras.layers.Conv2DTranspose(
 tf_result = tf_conv(tf_input).numpy()
 
 torch_input = torch.Tensor(r)
-
 torch_conv = torch.nn.ConvTranspose2d(2, 3, 4, bias=False)
 torch_conv.weight.data.fill_(1.)
-
 torch_result = torch_conv(torch_input).detach().numpy()
 
 assert tf_result.shape == torch_result.shape
