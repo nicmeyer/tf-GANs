@@ -60,7 +60,7 @@ class ExponentialDecay(callbacks.Callback):
     scheduled_lr = self.schedule(
       epoch, self.initial_learning_rate, self.decay_factor, self.min_lr)
     backend.set_value(self.model.optimizer.lr, scheduled_lr)
-    print("\nEpoch %05d: Learning rate is %6.4f." % (epoch, scheduled_lr))
+    print("\nEpoch %05d: Learning rate is %6.10f." % (epoch, scheduled_lr))
 
 
 def build_descriminator():
