@@ -1,7 +1,7 @@
 ## GAN
 
-<p align="center">
-    <img src="https://github.com/nicmeyer/tf-GANs/blob/main/gan/gan.gif)" width="640"\>
+<p align="center" width="100%">
+    <img src="https://github.com/nicmeyer/tf-GANs/blob/main/gan/gan.gif">
 </p>
 
 References:
